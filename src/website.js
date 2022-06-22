@@ -34,6 +34,7 @@ function createNav(){
 
     const menuBtn = document.createElement('div');
     menuBtn.setAttribute('class','button');
+    menuBtn.setAttribute('id','menu');
     menuBtn.textContent="Menu";
     menuBtn.addEventListener("click", (e) => {
             if (e.target.classList.contains("active")) return;
@@ -73,6 +74,13 @@ function removeBlankDiv(){
     blankDiv.remove()
 }
 
+function removeBlankDivExport(){
+    const menuBtn = document.getElementById('menu')
+    setActive(menuBtn);
+    removeBlankDiv();
+    showMenu();
+}
+
 function createFooter(){
     const footer= document.createElement('footer');
     footer.setAttribute('id','footer');
@@ -101,6 +109,6 @@ function setActive(btn){
       btn.classList.add("active");
 }
 
-export {removeBlankDiv, setActive, menuBtn};
+export {removeBlankDivExport};
 export default  loadSkeleton;
 

@@ -1,5 +1,4 @@
-import showMenu from "./menu";
-import {removeBlankDiv,setActive ,menuBtn} from "./website";
+import {removeBlankDivExport } from "./website";
 
 function showHome(){
     
@@ -18,10 +17,7 @@ function showHome(){
     menuButton.setAttribute('id','goToMenu')
     menuButton.textContent="See our Menu"
 
-    menuButton.addEventListener("click", () => {
-        setActive(menuBtn);
-        removeBlankDiv()
-        showMenu()})
+    menuButton.addEventListener("click", removeBlankDivExport)
 
     wrapper.appendChild(blankDiv);
     blankDiv.appendChild(pageBody)
