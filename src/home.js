@@ -1,3 +1,6 @@
+import showMenu from "./menu";
+import {removeBlankDiv,setActive ,menuBtn} from "./website";
+
 function showHome(){
     
 
@@ -14,6 +17,11 @@ function showHome(){
     const menuButton = document.createElement('button')
     menuButton.setAttribute('id','goToMenu')
     menuButton.textContent="See our Menu"
+
+    menuButton.addEventListener("click", () => {
+        setActive(menuBtn);
+        removeBlankDiv()
+        showMenu()})
 
     wrapper.appendChild(blankDiv);
     blankDiv.appendChild(pageBody)

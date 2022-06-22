@@ -1,5 +1,6 @@
 import showHome from "./home";
 import showInfo from "./contact";
+import showMenu from "./menu";
 
 function createHeader(){
     const header = document.createElement('header');
@@ -37,7 +38,8 @@ function createNav(){
     menuBtn.addEventListener("click", (e) => {
             if (e.target.classList.contains("active")) return;
             setActive(menuBtn);
-            // showMenu();
+            removeBlankDiv()
+            showMenu();
         })
 
     const infoBtn = document.createElement('div');
@@ -99,6 +101,6 @@ function setActive(btn){
       btn.classList.add("active");
 }
 
-
+export {removeBlankDiv, setActive, menuBtn};
 export default  loadSkeleton;
 

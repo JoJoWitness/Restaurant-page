@@ -1,3 +1,5 @@
+import Chef from './Manager1a.jpg'
+
 function showInfo(){
 
 
@@ -26,7 +28,7 @@ function createContact(){
     let liCaption = document.createElement('li')
     let liEmail = document.createElement('li')
     let img = document.createElement('img')
-    img.src= "./Manager1a.jpg"
+    img.src= Chef
 
     liImg.appendChild(img);
     liCaption.textContent = "Contact our chef, a very talented cook with decades of experience";
